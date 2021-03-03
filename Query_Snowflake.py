@@ -14,3 +14,11 @@ cursor = snowflake_instance.set_session_parameters( role= "SYSADMIN", warehouse=
 
 result = snowflake_instance.run_sql(cursor, "show databases;")
 df = snowflake_instance.fetch_dataframe_from_sql(cursor, "show databases;")
+
+create_db_football_matches = snowflake_instance.run_sql(cursor, f"CREATE DATABASE IF NOT EXISTS <>_{os.environ.get('ENV')}.<>;")
+create_schema_<> = snowflake_instance.run_sql(cursor, f"CREATE SCHEMA IF NOT EXISTS <>_{os.environ.get('ENV')}.<>;")
+#create_table_<> = snowflake_instance.run_sql(cursor, f"CREATE TABLE IF NOT EXISTS <>_{os.environ.get('ENV')}.<>.<> ....;")
+data_putter = snowflake_instance.run_sql(cursor, f"PUT <CSV file> @%test_table......;")
+data_copier = snowflake_instance.run_sql(cursor, f"COPY INTO test_table;")
+#result = snowflake_instance.run_sql(cursor, "SHOW DATABASES;")
+df = snowflake_instance.fetch_dataframe_from_sql(cursor, "SHOW DATABSES;")
