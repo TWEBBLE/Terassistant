@@ -18,5 +18,7 @@ df = pd.read_csv(
     r"C:\Users\Thomas\OneDrive\Documents\Football_Project_Github\Data\WorldCupPlayers.csv")
 print(df)
 
+
+
 df.to_sql('players', engine, if_exists='replace',
           schema='MATCHES', index=False, chunksize=16000)
