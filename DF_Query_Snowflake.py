@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine
-from Snowflake_Connector import Snowflake_Connector
 import os
 import pandas as pd
 
