@@ -1,13 +1,19 @@
-# Fantasy Football Assistant
+# World Cup Data Engineering Project
 
-## Phase 1
+In this project I'm going to connect the code on my machine with my snowflake database using Python. This will involve writing a program that will act as a mediator between my computer and snowflake.
 
-To create template dataframes using using datasets from various world cups.
+## How to run the code
+This project relies on environment variables for user authentication. You will need to export the following variables to your shell:
 
-## Phase 2
+>SNOWFLAKE_USER
+>SNOWFLAKE_ROLE
+>SNOWFLAKE_PASSWORD
+>SNOWFLAKE_ACCOUNT
+>SNOWFLAKE_REGION
+>SNOWFLAKE_WAREHOUSE
 
-Create databases on SQL using similar data
+### To run the code use:
 
-## Phase 3
+>python3 query_snowflake.py
 
-create pipeline between SQL and Python
+This will populate your database on snowflake with data on every match in FIFA World Cup history.
